@@ -1,0 +1,16 @@
+domain: web
+version: "1.0.0"
+description: "개인 포트폴리오"
+
+tech_stack:
+  framework: "Next.js"
+  language: "TypeScript"
+  build_tool: "Next.js (built-in)"
+  state_management: "None"
+  styling: "Tailwind"
+  ui_library: "shadcn/ui"
+
+features:
+  - "framer-motion"
+  - "react-hook-form"
+  - "zod"

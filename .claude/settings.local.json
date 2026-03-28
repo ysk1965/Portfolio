@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(yes \"\")",
+      "Bash(shopt -s dotglob)",
+      "Bash(mv /Users/yoo/Portpolio/temp-init/* /Users/yoo/Portpolio/)",
+      "Bash(cp:*)",
+      "Bash(npm pkg:*)"
+    ]
+  }
+}
