@@ -1,0 +1,115 @@
+import type { CareerEvent } from "./types";
+
+export const careerEvents: CareerEvent[] = [
+  {
+    id: "krafton-join",
+    date: "2019.04",
+    year: 2019,
+    title: "KRAFTON 입사",
+    company: "KRAFTON",
+    description: "TERA M 일본 서비스 프로젝트 TERA ORIGIN 컨텐츠 개발",
+    icon: "/icon/AppIcon_TERAOrigin.webp",
+    details:
+      "클라이언트와 서버를 구분하지 않는 컨텐츠 단위 개발 방식으로 대규모 MMORPG의 컨텐츠를 담당. 폭넓은 기술 스택을 쌓는 계기가 되었습니다.",
+    type: "join",
+    tags: ["Unity", "C#", "Golang", "Redis", "Vue.js", "MMORPG"],
+  },
+  {
+    id: "cookapps-join",
+    date: "2020.04",
+    year: 2020,
+    title: "COOKAPPS 합류",
+    company: "COOKAPPS",
+    description: "PUN2 기반 실시간 PvP 게임 랜덤로얄 개발",
+    icon: "/icon/AppIcon_RandomRoyale.webp",
+    details:
+      "Unity 기반 모바일 게임 개발로 전환. PUN2를 활용한 실시간 멀티플레이 매칭 시스템과 게임플레이 핵심 로직을 구현했습니다.",
+    type: "join",
+    tags: ["Unity", "PUN2", "PvP"],
+    metric: "매출 $300만",
+  },
+  {
+    id: "dungeon-today",
+    date: "2021",
+    year: 2021,
+    title: "오늘도던전 메인 클라이언트",
+    company: "COOKAPPS",
+    description: "IDLE RPG 메인 클라이언트 프로그래머로 핵심 시스템 설계",
+    icon: "/icon/AppIcon_AFKDungeon.webp",
+    details:
+      "UI 프레임워크, 컨텐츠 파이프라인, 실시간 동기화 시스템을 설계·구현. 이후 나이츠 키우기, 포트리스 사가 등 사내 게임잼에서 성과를 인정받아 PO 기회를 얻었습니다.",
+    type: "project",
+    tags: ["Unity", "Idle RPG"],
+    metric: "매출 $755만",
+  },
+  {
+    id: "po-transition",
+    date: "2022.04",
+    year: 2022,
+    title: "PO 전환 — 무명기사단 시작",
+    company: "COOKAPPS",
+    description: "게임잼 성과를 인정받아 Product Owner로 전환, 팀 빌딩 시작",
+    icon: "/icon/AppIcon_UnknownKnights.webp",
+    details:
+      "3명에서 시작한 팀을 12명까지 스케일업. 기획, 개발, 아트, QA 전 직군을 매니지먼트하며 팀배틀 RPG의 초기 설계부터 프로덕트 전체를 리드했습니다.",
+    type: "role-change",
+    tags: ["Unity", "PO", "팀 빌딩", "Team Battle RPG"],
+    metric: "3→12명 팀 빌딩",
+  },
+  {
+    id: "unnamed-knights-launch",
+    date: "2023.04",
+    year: 2023,
+    title: "무명기사단 런칭 & BEP 달성",
+    company: "COOKAPPS",
+    description: "개발 1년 만에 런칭, 2개월 만에 BEP 달성. 글로벌 확장 시작",
+    icon: "/icon/AppIcon_UnknownKnights.webp",
+    details:
+      "한국 하드런칭 후 대만(소프트월드), 일본, 중국(하오플레이)으로 글로벌 서비스를 확장. 단일 프로젝트로 2023년 연매출 170억 원을 달성했습니다.",
+    type: "milestone",
+    tags: ["글로벌 런칭", "한국", "미국", "대만", "일본"],
+    metric: "매출 $1800만",
+  },
+  {
+    id: "multi-projects-2024",
+    date: "2024",
+    year: 2024,
+    title: "3개 멀티 프로젝트 디렉팅",
+    company: "COOKAPPS",
+    description:
+      "무명기사단 IP 콜라보 + 스텔라나이츠 신작 + 슈퍼루키 프로젝트 동시 디렉팅",
+    icon: "/icon/AppIcon_AutoBattler.webp",
+    details:
+      "12명에서 23명까지 팀을 스케일업하며 3개 프로젝트를 동시에 디렉팅했습니다. 무명기사단에서 역대급 영지 설계사와 원펀맨 IP 콜라보레이션을 성공적으로 진행하면서, 차기작 스텔라나이츠와 슈퍼루키 프로젝트를 병행 기획·개발했습니다. 스텔라나이츠는 D1 리텐션 50%를 기록했으나, 회사 전략이 Go West로 전환되며 홀딩되었습니다.",
+    type: "project",
+    tags: ["IP 콜라보", "멀티 디렉팅", "서브컬처"],
+    metric: "12→23명 팀 스케일업",
+  },
+  {
+    id: "china-stella",
+    date: "2025",
+    year: 2025,
+    title: "중국 외자판호 + 스텔라나이츠 재개",
+    company: "COOKAPPS",
+    description: "무명기사단 중국 진출 및 스텔라나이츠 소프트런칭 개발",
+    icon: "/icon/AppIcon_UnknownKnights.webp",
+    details:
+      "무명기사단이 중국 외자판호를 발급받아 하오플레이와 협업하여 중국 서비스를 추진. 안정화 후 스텔라나이츠 개발을 재개하여 D1 리텐션 50% 유지를 확인, 소프트 런칭을 향해 개발 중입니다.",
+    type: "milestone",
+    tags: ["외자판호", "하오플레이", "소프트런칭"],
+  },
+  {
+    id: "ax-transformation",
+    date: "2026",
+    year: 2026,
+    title: "스텔라나이츠 PO + 팀 AX 전환",
+    company: "COOKAPPS",
+    icon: "/icon/AppIcon_AutoBattler.webp",
+    description:
+      "스텔라나이츠 프로젝트 PO로서 팀 AX 전환을 주도하며 개발 효율화",
+    details:
+      "스텔라나이츠의 PO로서 프로덕트를 리드하면서, AI 기반 멀티 에이전트 오케스트레이션 시스템을 설계·구축하여 팀의 AX 전환을 주도하고 있습니다. 운영툴, 데이터 시트툴 등 내부 도구를 직접 개발하여 팀 생산성을 높이고, 사이드로 BRIDGE SPOTS(팀 협업 툴)를 기획·개발하며 풀스택 역량을 확장하고 있습니다.",
+    type: "project",
+    tags: ["PO", "AX 전환", "AI/MAS", "내부 도구 개발"],
+  },
+];

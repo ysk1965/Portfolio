@@ -6,7 +6,24 @@
       "Bash(shopt -s dotglob)",
       "Bash(mv /Users/yoo/Portpolio/temp-init/* /Users/yoo/Portpolio/)",
       "Bash(cp:*)",
-      "Bash(npm pkg:*)"
+      "Bash(npm pkg:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(find /Users/yoo/.claude -type f -name *plugin* -o -name *registry* -o -name *.yaml)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(npx next:*)",
+      "Bash(ls:*)",
+      "Bash(grep -r \"About\\\\|Career\\\\|about\\\\|career\" /Users/yoo/Portpolio/lib/ --include=*.ts --include=*.tsx)",
+      "Bash(grep:*)",
+      "Bash(ls /Users/yoo/.claude/skills/core-*.md)",
+      "Bash(mkdir -p /Users/yoo/Portpolio/public/logo)",
+      "Bash(cp /Users/yoo/Portpolio/logo/logo_github.png /Users/yoo/Portpolio/public/logo/)",
+      "Bash(cp /Users/yoo/Portpolio/logo/logo_linkedin.png /Users/yoo/Portpolio/public/logo/)",
+      "Bash(vercel --version)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git add:*)"
     ]
   }
 }
