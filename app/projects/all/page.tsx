@@ -9,7 +9,17 @@ export const metadata: Metadata = {
   description: "모든 프로젝트 상세 정보",
 };
 
-const sorted = [...projects].sort((a, b) => a.order - b.order);
+function parseStartDate(period: string): number {
+  const match = period.match(/^(\d{4})(?:\.(\d{2}))?/);
+  if (!match) return 0;
+  const year = parseInt(match[1], 10);
+  const month = match[2] ? parseInt(match[2], 10) : 1;
+  return year * 100 + month;
+}
+
+const sorted = [...projects].sort(
+  (a, b) => parseStartDate(b.period) - parseStartDate(a.period),
+);
 
 export default function AllProjectsPage() {
   return (
