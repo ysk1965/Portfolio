@@ -192,6 +192,9 @@
   }
 
   /* ── 전체 프로젝트 합본 PDF ── */
+  .all-projects-toc {
+    break-after: page;
+  }
   .all-projects-item {
     break-before: page;
   }
