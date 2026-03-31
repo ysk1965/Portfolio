@@ -92,6 +92,16 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface EducationItem {
+  id: string;
+  year: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  type: "education" | "award" | "activity" | "certificate" | "launch" | "join";
+  icon?: string;
+}
+
 export interface GameJamProject {
   title: string;
   description: string;

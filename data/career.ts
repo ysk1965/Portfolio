@@ -102,14 +102,14 @@ export const careerEvents: CareerEvent[] = [
     id: "ax-transformation",
     date: "2026",
     year: 2026,
-    title: "스텔라나이츠 PO + 팀 AX 전환",
+    title: "스텔라나이츠 PO + 팀 AX 시도",
     company: "COOKAPPS",
     icon: "/icon/AppIcon_AutoBattler.webp",
     description:
-      "스텔라나이츠 프로젝트 PO로서 팀 AX 전환을 주도하며 개발 효율화",
+      "스텔라나이츠 프로젝트 PO로서 팀 AX 방향을 모색하며 개발 효율화",
     details:
-      "스텔라나이츠의 PO로서 프로덕트를 리드하면서, AI 기반 멀티 에이전트 오케스트레이션 시스템을 설계·구축하여 팀의 AX 전환을 주도하고 있습니다. 운영툴, 데이터 시트툴 등 내부 도구를 직접 개발하여 팀 생산성을 높이고, 사이드로 BRIDGE SPOTS(팀 협업 툴)를 기획·개발하며 풀스택 역량을 확장하고 있습니다.",
+      "스텔라나이츠의 PO로서 프로덕트를 리드하면서, AX(AI Transformation)를 팀에 적용하기 위해 자체 협업툴을 직접 기획·개발했습니다. 이 협업툴에 쌓인 데이터를 기반으로 보고서 자동화, 태스크 생성·분배 자동화 등 데이터 드리븐 업무환경을 구축하며 팀 생산성을 높이고 있습니다. 운영툴, 데이터 시트툴 등 내부 도구도 직접 개발하며 풀스택 역량을 확장하고 있습니다.",
     type: "project",
-    tags: ["PO", "AX 전환", "AI/MAS", "내부 도구 개발"],
+    tags: ["PO", "AX", "AI/MAS", "내부 도구 개발"],
   },
 ];

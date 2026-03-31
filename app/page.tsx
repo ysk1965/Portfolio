@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { Hero } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about";
+import { Education } from "@/components/sections/education";
 import { Career } from "@/components/sections/career";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
@@ -23,6 +24,10 @@ export default function Home() {
 
       <SectionWrapper id="about">
         <AboutSection />
+      </SectionWrapper>
+
+      <SectionWrapper id="education">
+        <Education />
       </SectionWrapper>
 
       <SectionWrapper id="career">

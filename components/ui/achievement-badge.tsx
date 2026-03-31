@@ -79,9 +79,14 @@ function AnimatedValue({ value }: { value: string }) {
 
   return (
     <span ref={ref} className="text-2xl font-bold text-foreground">
-      {parsed.prefix}
-      {isInView ? displayNumber : 0}
-      {parsed.suffix}
+      {/* 화면용 (애니메이션) */}
+      <span className="print:hidden">
+        {parsed.prefix}
+        {isInView ? displayNumber : 0}
+        {parsed.suffix}
+      </span>
+      {/* 프린트용 (최종 값) */}
+      <span className="hidden print:inline">{value}</span>
     </span>
   );
 }
@@ -107,7 +112,7 @@ export function AchievementBadge({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-5 shadow-sm"
+      className="flex flex-col items-center gap-2 rounded-xl bg-card p-5"
     >
       {Icon && <Icon className="size-5 text-muted-foreground" />}
       <AnimatedValue value={value} />

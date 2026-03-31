@@ -101,7 +101,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8">
+        <div className="space-y-8 print:contents">
           {/* Achievements */}
           {project.achievements.length > 0 && (
             <motion.div
@@ -109,6 +109,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
               transition={
                 prefersReducedMotion ? undefined : { duration: 0.5, delay: 0.2 }
               }
+              className="print:order-1"
             >
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
                 주요 성과
@@ -143,6 +144,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
               transition={
                 prefersReducedMotion ? undefined : { duration: 0.5, delay: 0.3 }
               }
+              className="print:order-2"
             >
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
                 기술 스택
@@ -167,6 +169,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
               transition={
                 prefersReducedMotion ? undefined : { duration: 0.5, delay: 0.4 }
               }
+              className="print:order-4"
             >
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
                 링크

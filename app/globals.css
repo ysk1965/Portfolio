@@ -158,3 +158,164 @@
     @apply font-sans scroll-smooth;
   }
 }
+
+/* ── Print styles ── */
+@media print {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 네비게이션, 푸터, 헤더 spacer 숨기기 */
+  header,
+  footer,
+  body > div > div.h-16 {
+    display: none !important;
+  }
+
+  /* 선택 해제된 섹션 숨기기 */
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* 애니메이션 제거 — 모든 요소 즉시 표시 */
+  *:not(img) {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* ── Hero 첫 페이지 ── */
+  #hero {
+    break-after: page;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* 페이지 전체 높이, 중앙 정렬 */
+  #hero > div {
+    min-height: 85vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  /* 좌우 배치 강제 (텍스트 좌, 사진 우) */
+  #hero section {
+    min-height: auto !important;
+    flex-direction: row !important;
+    gap: 3rem !important;
+  }
+  #hero section > div:first-child {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 3rem !important;
+  }
+  /* 텍스트 영역 좌측 정렬 */
+  #hero section > div:first-child > div:first-child {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  /* 프로필 사진 크기 */
+  #hero [class*="h-[420px]"],
+  #hero [class*="h-[500px]"],
+  #hero [class*="h-[560px]"] {
+    height: 360px !important;
+    width: 270px !important;
+  }
+  /* 스크롤 인디케이터 숨기기 */
+  #hero .absolute.bottom-8 {
+    display: none !important;
+  }
+  /* 3D 레이어, 글레어 숨기기 */
+  [style*="translateZ"],
+  [style*="radial-gradient"] {
+    display: none !important;
+  }
+
+  /* ── Career ── */
+  #career {
+    break-before: page;
+  }
+  #career .mt-12,
+  #career .md\:mt-16 {
+    margin-top: 1rem !important;
+  }
+  /* 개별 타임라인 아이템만 잘림 방지 (전체 래퍼 제외) */
+  #career .flex.flex-col > div {
+    break-inside: avoid;
+  }
+
+  /* 섹션 간격 축소 */
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* 개별 카드만 페이지 잘림 방지 */
+  .rounded-xl,
+  .rounded-lg {
+    break-inside: avoid;
+  }
+
+  /* About 접힌 텍스트 프린트 시 펼치기 */
+  #about .space-y-5.hidden {
+    display: block !important;
+  }
+  /* About "더 보기" 버튼 숨기기 */
+  #about .pt-2.md\:hidden {
+    display: none !important;
+  }
+
+  /* 어두운 배경 제거 — 태그/배지를 보더로 대체 */
+  .bg-muted {
+    background-color: transparent !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  /* ── 프로젝트 상세 페이지 ── */
+  /* 주요 성과 4개 한 줄 */
+  .grid-cols-2.gap-3 {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  /* 프로젝트 히어로 상단 여백 축소 */
+  main section:first-child > div {
+    padding-top: 0 !important;
+    padding-bottom: 0.5rem !important;
+  }
+  /* 사이드바/메인 콘텐츠 간격 축소 */
+  main .space-y-8 > * + *,
+  main .space-y-10 > * + * {
+    margin-top: 0.75rem !important;
+  }
+  main .gap-12 {
+    gap: 0.75rem !important;
+  }
+  /* 이전/다음 네비게이션 숨기기 */
+  nav:has(a[href*="/projects/"]) {
+    display: none !important;
+  }
+  /* 1컬럼 + 사이드바 분해: 성과/기술 → 소개 → 링크 */
+  .md\:grid-cols-3 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .md\:grid-cols-3 > .md\:col-span-2 {
+    order: 3 !important;
+  }
+  /* 상세 이미지 크기 제한 */
+  main img {
+    max-height: 400px !important;
+    object-fit: contain !important;
+  }
+
+  /* 페이지 여백 */
+  @page {
+    margin: 15mm 10mm;
+    size: A4;
+  }
+}

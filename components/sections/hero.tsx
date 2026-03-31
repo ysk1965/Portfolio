@@ -78,7 +78,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            className="max-w-md text-lg text-muted-foreground sm:text-xl"
+            className="max-w-md text-lg text-muted-foreground sm:text-xl break-keep"
             variants={item}
           >
             기술로 비즈니스 임팩트를 만드는 개발자
@@ -98,6 +98,19 @@ export function Hero() {
               </a>
             ))}
           </motion.div>
+
+          {/* 프린트 시에만 표시 — 라이브 포트폴리오 링크 */}
+          <div className="hidden print:block mt-4 rounded-lg border border-border bg-muted/50 px-4 py-3 text-center">
+            <p className="text-xs text-muted-foreground mb-1">
+              자세한 포트폴리오는 웹페이지에서 확인해주세요
+            </p>
+            <a
+              href="https://portfolio-nine-sooty-6qbilrilws.vercel.app/"
+              className="text-sm font-medium text-accent underline underline-offset-2"
+            >
+              portfolio-nine-sooty-6qbilrilws.vercel.app
+            </a>
+          </div>
         </div>
 
         {/* 프로필 사진 영역 - 3D tilt */}

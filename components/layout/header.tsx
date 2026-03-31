@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Menu, X, ArrowLeft } from "lucide-react";
+import { Menu, X, ArrowLeft, FileDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   useActiveSection,
@@ -11,10 +11,12 @@ import {
   type SectionId,
 } from "@/lib/hooks/use-active-section";
 import { MobileNav } from "./mobile-nav";
+import { PdfDownloadButton } from "@/components/pdf/pdf-download-button";
 
 const NAV_LABELS: Record<SectionId, string> = {
   hero: "Home",
   about: "About",
+  education: "Education",
   career: "Career",
   projects: "Projects",
   skills: "Skills",
@@ -74,14 +76,17 @@ export function Header() {
                 ))}
               </ul>
 
-              {/* Mobile hamburger */}
-              <button
-                className="md:hidden p-2 cursor-pointer"
-                onClick={() => setMobileOpen(true)}
-                aria-label="메뉴 열기"
-              >
-                <Menu className="size-5" />
-              </button>
+              <div className="flex items-center gap-1">
+                <PdfDownloadButton />
+                {/* Mobile hamburger */}
+                <button
+                  className="md:hidden p-2 cursor-pointer"
+                  onClick={() => setMobileOpen(true)}
+                  aria-label="메뉴 열기"
+                >
+                  <Menu className="size-5" />
+                </button>
+              </div>
             </>
           ) : (
             <>
@@ -92,6 +97,29 @@ export function Header() {
                 <ArrowLeft className="size-4" />
                 <span>돌아가기</span>
               </Link>
+              <button
+                onClick={() => {
+                  const imgs = document.querySelectorAll<HTMLImageElement>(
+                    'img[loading="lazy"]',
+                  );
+                  imgs.forEach((img) => img.setAttribute("loading", "eager"));
+                  Promise.all(
+                    Array.from(document.images)
+                      .filter((img) => !img.complete)
+                      .map(
+                        (img) =>
+                          new Promise<void>((r) => {
+                            img.onload = () => r();
+                            img.onerror = () => r();
+                          }),
+                      ),
+                  ).then(() => window.print());
+                }}
+                className="p-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                aria-label="PDF 내보내기"
+              >
+                <FileDown className="size-5" />
+              </button>
             </>
           )}
         </nav>

@@ -38,6 +38,7 @@ export const skillCategories: SkillCategory[] = [
           { name: "Redis" },
           { name: "IOCP" },
           { name: "PUN2" },
+          { name: "AWS" },
         ],
       },
     ],
@@ -93,6 +94,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "BRIDGE SPOTS" },
       { name: "AutoBattler Sheets" },
       { name: "SignalFirst" },
+      { name: "오케스트레이션 패키지" },
     ],
   },
 ];
