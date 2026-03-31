@@ -191,6 +191,14 @@
     transform: none !important;
   }
 
+  /* ── 전체 프로젝트 합본 PDF ── */
+  .all-projects-item {
+    break-before: page;
+  }
+  .all-projects-item:first-child {
+    break-before: auto;
+  }
+
   /* ── Hero 첫 페이지 ── */
   #hero {
     break-after: page;

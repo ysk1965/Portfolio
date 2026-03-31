@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +12,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { FileDown } from "lucide-react";
+import { FileDown, BookOpen } from "lucide-react";
 
 const SECTIONS = [
   { id: "hero", label: "Hero" },
@@ -146,6 +147,19 @@ export function PdfExportDialog({ open, onOpenChange }: PdfExportDialogProps) {
           <FileDown className="size-4 mr-2" />
           PDF 내보내기
         </Button>
+
+        <div className="relative flex items-center py-1">
+          <div className="flex-grow border-t border-border" />
+          <span className="mx-3 text-xs text-muted-foreground">또는</span>
+          <div className="flex-grow border-t border-border" />
+        </div>
+
+        <Link href="/projects/all" target="_blank">
+          <Button variant="outline" className="w-full cursor-pointer">
+            <BookOpen className="size-4 mr-2" />
+            전체 프로젝트 PDF 내보내기
+          </Button>
+        </Link>
       </DialogContent>
     </Dialog>
   );
