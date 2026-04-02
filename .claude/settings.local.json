@@ -23,7 +23,19 @@
       "Bash(vercel --version)",
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(mv symbol_10.png symbol_9.png)",
+      "Bash(mv symbol_11.png symbol_10.png)",
+      "Bash(curl -sL -o NotoSansKR-Regular.ttf \"https://cdn.jsdelivr.net/gh/googlefonts/noto-cjk@main/Sans/SubsetOTF/KR/NotoSansKR-Regular.otf\")",
+      "Bash(curl -sL -o NotoSansKR-Bold.ttf \"https://cdn.jsdelivr.net/gh/googlefonts/noto-cjk@main/Sans/SubsetOTF/KR/NotoSansKR-Bold.otf\")",
+      "Bash(npm uninstall:*)",
+      "Bash(mkdir -p /Users/yoo/Portpolio/public/projects/auto-battler-sheets)",
+      "Bash(cp /Users/yoo/Portpolio/Image_SheetsManageTool/1.png /Users/yoo/Portpolio/public/projects/auto-battler-sheets/StellaSheets_StageChart.png)",
+      "Bash(cp /Users/yoo/Portpolio/Image_SheetsManageTool/2.png /Users/yoo/Portpolio/public/projects/auto-battler-sheets/StellaSheets_StageLevelDesign.png)",
+      "Bash(cp /Users/yoo/Portpolio/Image_SheetsManageTool/3.png /Users/yoo/Portpolio/public/projects/auto-battler-sheets/StellaSheets_CharacterBalance.png)",
+      "Bash(cp /Users/yoo/Portpolio/Image_SheetsManageTool/4.png /Users/yoo/Portpolio/public/projects/auto-battler-sheets/StellaSheets_EconomyBalance.png)"
     ]
   }
 }

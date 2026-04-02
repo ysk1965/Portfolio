@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { careerEvents } from "@/data/career";
 import { TimelineNode } from "@/components/ui/timeline-node";
+import { CareerGantt } from "@/components/ui/career-gantt";
 
 export function Career() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,8 +33,13 @@ export function Career() {
         Career
       </motion.h2>
 
+      {/* Gantt Chart */}
+      <div className="mt-8 md:mt-10">
+        <CareerGantt />
+      </div>
+
       {/* Timeline */}
-      <div className="relative mt-12 md:mt-16">
+      <div className="relative">
         {/* Vertical line - desktop center */}
         <div className="absolute left-[0.75rem] top-0 hidden h-full w-px bg-border md:left-1/2 md:block md:-translate-x-px" />
 
